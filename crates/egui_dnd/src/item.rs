@@ -269,4 +269,4 @@ impl<'a> Item<'a> {
     }
 }
 
-pub struct ItemResponse(pub(crate) Rect);
+pub struct ItemResponse(pub Rect);
