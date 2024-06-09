@@ -231,7 +231,10 @@ impl<'a> Item<'a> {
             } = &mut self.dnd_state.detection_state
             {
                 // We set this here because we don't know the size in the handle
-                *dragged_item_size = egui::vec2(10.0, 10.0);
+                let mut handle_size = rect.size();
+                handle_size.y = 16.0;
+
+                *dragged_item_size = handle_size;
             }
         }
 
